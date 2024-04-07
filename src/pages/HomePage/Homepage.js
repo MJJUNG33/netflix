@@ -1,5 +1,5 @@
 import React from "react";
-import Banner from "./components/banner/Banner";
+import Banner from "./components/Banner/Banner";
 
 //1. banner => take popular movies and show first movie
 //2. popular movie
