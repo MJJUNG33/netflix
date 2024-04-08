@@ -5,8 +5,7 @@ import { Alert } from "react-bootstrap";
 
 const Banner = () => {
   const { data, isLoading, error, isError } = usePopularMoviesQuery();
-  console.log(data);
-  // console.log(data.results[0].poster_path);
+
   if (isLoading) {
     <h1>
       <span class="loader"></span> Loading...
@@ -27,8 +26,10 @@ const Banner = () => {
       className="banner"
     >
       <div className="text-white banner-text-area">
-        <h1 className="text-white banner-text">{data?.results[0].title}</h1>
-        <p className="text-white banner-text">{data?.results[0].overview}</p>
+        <h1 className="text-white banner-title">{data?.results[0].title}</h1>
+        <p className="text-white banner-overview">
+          {data?.results[0].overview}
+        </p>
       </div>
     </div>
   );

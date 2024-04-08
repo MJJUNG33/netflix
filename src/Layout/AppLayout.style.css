@@ -1,0 +1,11 @@
+
+.search-form {
+    margin-bottom: 1rem ;
+}
+
+@media only screen and (min-width: 64rem) {
+
+.search-form {
+    margin-bottom: 0;
+}
+  }

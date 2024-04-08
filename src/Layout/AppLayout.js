@@ -26,7 +26,7 @@ const AppLayout = () => {
                 Movies
               </Nav.Link>
             </Nav>
-            <Form className="d-flex">
+            <Form className="d-flex search-form">
               <Form.Control
                 type="search"
                 placeholder="Search"

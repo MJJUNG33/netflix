@@ -19,7 +19,7 @@ const responsive = {
   },
   mobile: {
     breakpoint: { max: 464, min: 0 },
-    items: 2,
+    items: 1,
     slidesToSlide: 1, // optional, default to 1.
   },
 };
@@ -40,7 +40,7 @@ const PopularMovieSlide = () => {
 
   return (
     <div>
-      <h3 className="mt-5">Popular Movies</h3>
+      <h3 className="carousel-title">Popular Movies</h3>
       <Carousel
         infinite={true}
         centerMode={true}

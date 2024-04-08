@@ -2,3 +2,10 @@
     overflow: hidden;
     height: 440px;
 }
+
+.carousel-title {
+    margin-top: 7rem;
+    text-align: start;
+    margin-left: 0.5rem;
+}
+
