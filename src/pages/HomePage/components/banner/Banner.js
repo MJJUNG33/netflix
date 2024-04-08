@@ -30,7 +30,7 @@ const Banner = () => {
       <div className="text-white banner-text-area">
         <h1 className="text-white banner-title">{data?.results[0].title}</h1>
         <p className="text-white banner-overview">
-          {data?.results[0].overview}{" "}
+          {data?.results[0].overview}
         </p>
       </div>
     </div>
