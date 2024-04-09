@@ -4,7 +4,7 @@ import "react-multi-carousel/lib/styles.css";
 import Carousel from "react-multi-carousel";
 import MovieCard from "../MovieCard";
 
-const UpcomingMoviesSlider = ({ title, movies, responsive }) => {
+const UpcomingMoviesSlider = ({ title, movies, responsive, deviceType }) => {
   return (
     <div>
       {" "}
@@ -15,6 +15,7 @@ const UpcomingMoviesSlider = ({ title, movies, responsive }) => {
         itemClass="movie-slider p-1"
         containerClass="carousel-container"
         responsive={responsive}
+        swipeable={deviceType !== "desktop" ? true : false}
       >
         {movies.map((movie, i) => (
           <MovieCard movie={movie} key={i} />

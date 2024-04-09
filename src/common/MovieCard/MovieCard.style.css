@@ -11,7 +11,7 @@
 }
 
 .overlay {
-    width: 100%;
+    width: 90%;
     height: 100%;
     background: rgba(43, 41, 41, 0.9);
     opacity: 0;
@@ -20,12 +20,13 @@
     font-weight: bold;
     overflow-wrap: break-word;
     padding: 1rem;
+
 }
 
 .overlay:hover {
     opacity: 1;    
     overflow: auto;
-    padding: 1rem;
+    margin: auto;
 }
 
 .movie-card:hover {
