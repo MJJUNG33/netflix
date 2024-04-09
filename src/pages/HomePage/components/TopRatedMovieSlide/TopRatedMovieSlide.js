@@ -10,7 +10,7 @@ const TopRatedMovieSlider = () => {
   if (isLoading) {
     return (
       <h1>
-        <span class="loader"></span> Loading...
+        <span className="loader"></span> Loading...
       </h1>
     );
   }
