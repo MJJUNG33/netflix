@@ -1,6 +1,5 @@
 import React from "react";
 import { Alert } from "react-bootstrap";
-import "./TopRatedMovieSlider.style.css";
 import MovieSlider from "../../../../common/MovieCard/MovieSliders/PopularMovieSlider";
 import { responsive } from "../../../../constants/responsive";
 import { useTopRatedMoviesQuery } from "../../../../hooks/useTopRatedMovies";
