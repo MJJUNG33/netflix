@@ -2,8 +2,20 @@ import React from "react";
 import "./MovieCard.style.css";
 import { Badge } from "react-bootstrap";
 import starIcon from "../../images/star.png";
+import { useMovieGenreQuery } from "../../hooks/useMovieGenre";
 
 const MovieCard = ({ movie }) => {
+  const { data: genreData } = useMovieGenreQuery();
+
+  const showGenre = (genreIdList) => {
+    if (!genreData) return [];
+    const genreNameList = genreIdList.map((id) => {
+      const genreObj = genreData.find((genre) => genre.id === id);
+      return genreObj.name;
+    });
+    return genreNameList;
+  };
+
   return (
     <div
       style={{
@@ -18,9 +30,8 @@ const MovieCard = ({ movie }) => {
         <h4>{movie?.title}</h4>
         <div className="genre">
           Genre:
-          {movie?.genre_ids.map((id) => (
-            <Badge bg="danger" className="ms-1">
-              {" "}
+          {showGenre(movie.genre_ids).map((id, i) => (
+            <Badge key={i} bg="danger" className="ms-1">
               {id}
             </Badge>
           ))}
