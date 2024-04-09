@@ -1,6 +1,7 @@
 import React from "react";
 import Banner from "./components/Banner/Banner";
 import PopularMovieSlide from "./components/PopularMovieSlide/PopularMovieSlide";
+import TopRatedMovieSlider from "./components/TopRatedMovieSlider/TopRatedMovieSlider";
 
 //1. banner => take popular movies and show first movie
 //2. popular movie
@@ -12,6 +13,7 @@ const Homepage = () => {
     <div>
       <Banner />
       <PopularMovieSlide />
+      <TopRatedMovieSlider />
     </div>
   );
 };

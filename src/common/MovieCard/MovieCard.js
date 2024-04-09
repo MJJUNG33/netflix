@@ -1,7 +1,8 @@
 import React from "react";
 import "./MovieCard.style.css";
 import { Badge } from "react-bootstrap";
-import starIcon from "../../../../images/star.png";
+import starIcon from "../../images/star.png";
+
 const MovieCard = ({ movie }) => {
   return (
     <div
@@ -14,7 +15,7 @@ const MovieCard = ({ movie }) => {
       className="movie-card"
     >
       <div className="overlay">
-        <h4>{movie?.title} </h4>
+        <h4>{movie?.title}</h4>
         <div className="genre">
           Genre:
           {movie?.genre_ids.map((id) => (

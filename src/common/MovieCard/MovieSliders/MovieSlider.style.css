@@ -1,0 +1,11 @@
+.carousel-container {
+    overflow: hidden;
+    height: 400px;
+}
+
+.carousel-title {
+    margin-top: 7rem;
+    text-align: start;
+    margin-left: 0.5rem;
+}
+
