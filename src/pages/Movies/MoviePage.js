@@ -109,8 +109,8 @@ const MoviePage = () => {
       <Row>
         <SortedMovieCards />
       </Row>
-      <Row className="mt-3">
-        <Col xs={12} md={9} lg={12}>
+      <Row className="mt-5">
+        <Col xs={12} lg={12}>
           <ReactPaginate
             nextLabel=">"
             onPageChange={handlePageClick}
