@@ -1,0 +1,24 @@
+.pagination {
+    justify-content: center;
+}
+
+
+.page-link {
+    color: white;
+    --bs-pagination-active-border-color: whi;
+    --bs-pagination-border-color: red;
+}
+
+.active>.page-link {
+    background-color: white;
+    color: red;
+}
+
+.pagination,
+li.page-item.disabled{
+    --bs-pagination-bg: red;
+    --bs-pagination-disabled-bg: red;
+    --bs-pagination-disabled-color: rgba(173, 172, 172, 0.667);
+    --bs-pagination-disabled-border-color: red;
+}
+

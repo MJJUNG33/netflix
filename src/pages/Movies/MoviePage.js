@@ -19,15 +19,13 @@ const MoviePage = () => {
     sortBy,
     filterBy,
   });
+
   console.log(data);
 
   const { data: genreData } = useMovieGenreQuery();
 
   const handlePageClick = ({ selected }) => {
-    const nextPage = selected + 1;
-    if (nextPage > 0 && nextPage <= (data?.total_pages || 1)) {
-      setPage(nextPage);
-    }
+    setPage(selected + 1);
   };
 
   const handleSortBy = (event) => {
@@ -111,15 +109,15 @@ const MoviePage = () => {
       <Row>
         <SortedMovieCards />
       </Row>
-      <Row>
+      <Row className="mt-3">
         <Col xs={12} md={9} lg={12}>
           <ReactPaginate
-            nextLabel="next >"
+            nextLabel=">"
             onPageChange={handlePageClick}
             pageRangeDisplayed={3}
-            marginPagesDisplayed={2}
+            marginPagesDisplayed={1}
             pageCount={data?.total_pages}
-            previousLabel="< previous"
+            previousLabel="<"
             pageClassName="page-item"
             pageLinkClassName="page-link"
             previousClassName="page-item"

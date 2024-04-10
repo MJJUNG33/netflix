@@ -8,6 +8,7 @@ const fetchSearchMovie = ({ keyword, page, sortBy, filterBy }) => {
         `/movie/popular?page=${page}&sortBy=${sortBy}&filterBy=${filterBy}`
       );
 };
+
 export const useSearchMovieQuery = ({ keyword, page, sortBy, filterBy }) => {
   return useQuery({
     queryKey: ["movie-search", keyword, page, sortBy, filterBy],
