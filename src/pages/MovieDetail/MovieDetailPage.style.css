@@ -1,0 +1,18 @@
+.detail-page-rating {
+    border-top: 1px solid darkgray;
+    margin: 1rem 0 ;
+}
+
+.detail-page-rating>.detail-icons {
+    padding-left: 0;
+}
+
+.detail-icons {
+    margin-top: 1rem;
+}
+
+.detail-page-overview {
+    border-top: 1px solid darkgray; 
+    margin-top: 1.5rem;
+    padding-top: 0.5rem;
+}

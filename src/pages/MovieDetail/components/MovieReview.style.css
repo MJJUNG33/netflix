@@ -1,0 +1,10 @@
+.reviews {
+    padding-left: 0;
+    margin-top: 3rem;
+    border-top: 1px solid darkgray;
+}
+
+.review-author,
+.review-content{  
+    margin-top: 0.5rem;
+    font-size: 12px;}

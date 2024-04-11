@@ -7,7 +7,6 @@ import { useMovieGenreQuery } from "../../../../hooks/useMovieGenre";
 const Banner = () => {
   const { data, isLoading, error, isError } = usePopularMoviesQuery();
   const { data: genreData } = useMovieGenreQuery();
-  console.log(data);
 
   const showGenre = (genreIdList) => {
     if (!genreData) return [];

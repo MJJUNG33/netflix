@@ -1,11 +1,15 @@
 import React from "react";
 import "./MovieCard.style.css";
-import { Badge } from "react-bootstrap";
+import { Badge, Row, Col } from "react-bootstrap";
 import starIcon from "../../images/star.png";
+import voteIcon from "../../images/vote.png";
+import budgetIcon from "../../images/money-bag.png";
 import { useMovieGenreQuery } from "../../hooks/useMovieGenre";
+import { useNavigate } from "react-router-dom";
 
 const MovieCard = ({ movie }) => {
   const { data: genreData } = useMovieGenreQuery();
+  const navigate = useNavigate();
 
   const showGenre = (genreIdList) => {
     if (!genreData) return [];
@@ -25,26 +29,47 @@ const MovieCard = ({ movie }) => {
           ")",
       }}
       className="movie-card"
+      onClick={() => navigate(`/movies/${movie.id}`)}
     >
-      <div className="overlay">
+      <div className="overlay text-start">
         <h4>{movie?.title}</h4>
-        <div className="genre">
-          Genre:
+        <div>
           {showGenre(movie.genre_ids).map((id, i) => (
-            <Badge key={i} bg="danger" className="ms-1">
+            <Badge key={i} bg="danger" className="me-1">
               {id}
             </Badge>
           ))}
         </div>
 
-        <div className="rating">
-          <span>
-            <img src={starIcon} alt="rating" className="star-icon" />
-          </span>
-          {movie?.vote_average}
+        <Row className="rating">
+          <Col>
+            <span>
+              <img src={starIcon} alt="rating" className="icons" />
+            </span>
+            {movie?.vote_average}
+          </Col>
+          <Col>
+            <span>
+              <img src={voteIcon} alt="voting" className="icons" />
+            </span>
+            {movie?.vote_average}
+          </Col>
+          <Col>
+            <span>
+              <img src={budgetIcon} alt="budget" className="icons" />
+            </span>
+            {movie?.vote_average}
+          </Col>
+        </Row>
+        <div className="release-date">
+          {" "}
+          <span className="fw-bold">Release: </span>
+          {movie?.release_date}
         </div>
-        <div className="release-date">Release: {movie?.release_date}</div>
-        <div className="overview">Overview: {movie?.overview}</div>
+        <div className="overview">
+          <span className="fw-bold">Overview: </span>
+          {movie?.overview}
+        </div>
         <div>{movie.adult ? <Badge bg="danger">18</Badge> : ""}</div>
       </div>
     </div>

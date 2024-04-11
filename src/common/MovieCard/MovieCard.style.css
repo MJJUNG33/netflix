@@ -44,15 +44,25 @@
 }
 
 .release-date,
-.overview  {
+.overview,
+.runtime,
+.production  {
     font-size: 10px;
+    text-align: start; 
 }
 
-.star-icon {
+.icons {
     height: 15px;
     padding-bottom: 3px;
     margin-right: 0.25rem;
 }
+
+.runtime-release {
+    align-content: center;
+    margin-top: 0.5rem;
+}
+
+
 
 @media only screen and (min-width: 48rem) {
     .movie-card {
