@@ -65,9 +65,6 @@
 
 
 @media only screen and (min-width: 48rem) {
-    .movie-card {
-        max-width:fit-content;
-    }
 
     .movie-card:hover {
         transform: scale(1.4) translateZ(40px);

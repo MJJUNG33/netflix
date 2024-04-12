@@ -33,7 +33,7 @@ const MovieReview = ({ id }) => {
   return (
     <Container className="reviews">
       <Col className="text-start">
-        <p className="mt-3 fw-bold">Reviews</p>
+        <p className="mt-3 fw-bold reviews-title">Reviews</p>
         {data ? (
           data.map((review, index) => (
             <div className="mt-4 mb-5" key={index}>

@@ -59,19 +59,19 @@ const MovieDetailPage = () => {
       {data && (
         <>
           <Row>
-            <Col xs={12} className="mt-3 mb-3">
+            <Col xs={12} lg={5} className="mt-3 mb-3">
               <div
                 style={{
                   backgroundImage: `url(https://media.themoviedb.org/t/p/w600_and_h900_bestv2${data?.poster_path})`,
                 }}
-                className="movie-card"
+                className="movie-card detail-movie-poster"
               >
                 {" "}
               </div>
             </Col>
-            <Col>
+            <Col lg={7} className=" movie-detail-info">
               <h4 className="text-start">{data?.title}</h4>
-              <div className="text-start">
+              <div className="text-start genres">
                 {showGenre(data?.genres).map((genre, index) => (
                   <Badge key={index} bg="danger" className="me-1">
                     {genre}
@@ -105,16 +105,16 @@ const MovieDetailPage = () => {
                 </Col>
               </Row>
 
-              <Row className="runtime-release ">
-                <Col xs={4}>
+              <Row className="runtime-release">
+                <Col xs={5} md={12}>
                   {" "}
                   <div className="runtime detail-runtime">
                     <span className="fw-bold">Runtime: </span>
                     {data?.runtime} mins
                   </div>
                 </Col>
-                <Col xs={5}>
-                  <div className="release-date mt-0">
+                <Col xs={6} md={12}>
+                  <div className="release-date detail-release mt-0">
                     <span className="fw-bold">Release: </span>{" "}
                     {data?.release_date}{" "}
                   </div>
@@ -125,11 +125,9 @@ const MovieDetailPage = () => {
                 {data?.production_companies[0].name}
               </div>
 
-              <div className="overview">
-                <div className="mt-2 pe-1">
-                  <span className="fw-bold">Overview: </span>
-                  {data?.overview}
-                </div>
+              <div className="overview mt-2 pe-3">
+                <span className="fw-bold">Overview: </span>
+                {data?.overview}
               </div>
               <div>{data.adult ? <Badge bg="danger">18</Badge> : ""}</div>
             </Col>

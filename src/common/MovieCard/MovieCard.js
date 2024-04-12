@@ -6,6 +6,7 @@ import voteIcon from "../../images/vote.png";
 import budgetIcon from "../../images/money-bag.png";
 import { useMovieGenreQuery } from "../../hooks/useMovieGenre";
 import { useNavigate } from "react-router-dom";
+import CurrencyFormat from "react-currency-format";
 
 const MovieCard = ({ movie }) => {
   const { data: genreData } = useMovieGenreQuery();
@@ -41,36 +42,32 @@ const MovieCard = ({ movie }) => {
           ))}
         </div>
 
-        <Row className="rating">
-          <Col>
+        <Row className="rating ">
+          <Col xs={4} md={6}>
             <span>
-              <img src={starIcon} alt="rating" className="icons" />
+              <img src={starIcon} alt="rating" className=" icons" />
             </span>
             {movie?.vote_average}
           </Col>
-          <Col>
+          <Col xs={8} md={6}>
             <span>
-              <img src={voteIcon} alt="voting" className="icons" />
+              <img src={voteIcon} alt="voting" className=" icons" />
             </span>
-            {movie?.vote_average}
-          </Col>
-          <Col>
-            <span>
-              <img src={budgetIcon} alt="budget" className="icons" />
-            </span>
-            {movie?.vote_average}
+            {movie?.vote_count}
           </Col>
         </Row>
-        <div className="release-date">
-          {" "}
-          <span className="fw-bold">Release: </span>
-          {movie?.release_date}
-        </div>
+        <Row xs={12}>
+          <div className="release-date mt-1">
+            <span className="fw-bold">Release: </span> {movie?.release_date}{" "}
+          </div>
+        </Row>
+
         <div className="overview">
-          <span className="fw-bold">Overview: </span>
-          {movie?.overview}
+          <div className="mt-2 pe-1">
+            <span className="fw-bold">Overview: </span>
+            {movie?.overview}
+          </div>
         </div>
-        <div>{movie.adult ? <Badge bg="danger">18</Badge> : ""}</div>
       </div>
     </div>
   );
