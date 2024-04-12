@@ -65,7 +65,7 @@ width: 70%;
 .banner-text-area > * {
 background-color: rgba(0, 0, 0, 0); 
 z-index: 2;
-line-height: 1.2;
+line-height: 1.1;
 }
 
 .banner-title {
@@ -75,16 +75,21 @@ line-height: 1.2;
 
 .banner-overview {
   font-size: 10px;
+  color:rgb(228, 226, 226);
 }
 
 @media only screen and (min-width: 48rem) {
-
   .banner {
-    height: 45vh;
+    height: 50vh;
+    width: 100%;
     }
 
+    .banner:before {
+      height: 55vh;
+      }
+
     .banner-text-area {
-      width: 55%;
+      width: 70%;
       height: 100%;
       display: flex;
       flex-direction: column;
@@ -96,14 +101,29 @@ line-height: 1.2;
       font-size: 22px;
       font-weight: bold;
     }
+
+    .banner-overview {
+      font-size: 1rem;
+    }
     
 }
 
 @media only screen and (min-width: 64rem) {
   .banner-text-area {
-    width: 40%;
+    width: 60%;
   }
+
   .banner {
-  height: 56vh;
+  height: 80vh;
+  background-repeat: no-repeat;
+}
+
+.banner:before {
+  height: 80vh;
+
+    }
+
+.banner-title {
+  font-size: 25px;
 }
 }

@@ -3,10 +3,8 @@ import "./MovieCard.style.css";
 import { Badge, Row, Col } from "react-bootstrap";
 import starIcon from "../../images/star.png";
 import voteIcon from "../../images/vote.png";
-import budgetIcon from "../../images/money-bag.png";
 import { useMovieGenreQuery } from "../../hooks/useMovieGenre";
 import { useNavigate } from "react-router-dom";
-import CurrencyFormat from "react-currency-format";
 
 const MovieCard = ({ movie }) => {
   const { data: genreData } = useMovieGenreQuery();

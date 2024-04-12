@@ -49,9 +49,7 @@ const Banner = () => {
             </Badge>
           ))}
         </div>
-        <p className="text-white banner-overview">
-          {data?.results[0].overview}
-        </p>
+        <p className="banner-overview">{data?.results[0].overview}</p>
       </div>
     </div>
   );
