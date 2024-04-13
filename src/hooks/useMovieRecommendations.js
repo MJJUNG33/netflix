@@ -5,7 +5,7 @@ const fetchMovieRecommendations = ({ id }) => {
   return api.get(`/movie/${id}/recommendations`);
 };
 
-export const useMovieRecommendations = ({ id }) => {
+export const useMovieRecommendationsQuery = ({ id }) => {
   return useQuery({
     queryKey: ["movie-recommendations", id],
     queryFn: () => fetchMovieRecommendations({ id }),

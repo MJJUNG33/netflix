@@ -3,14 +3,14 @@ import "./ReviewRecommendTab.style.css";
 import { Tabs, Tab } from "react-bootstrap";
 import MovieReview from "./MovieReview";
 import { useMovieReviewQuery } from "../../../hooks/useMovieReview";
-import { useMovieRecommendations } from "../../../hooks/useMovieRecommendations";
+import { useMovieRecommendationsQuery } from "../../../hooks/useMovieRecommendations";
 import MovieRecommendation from "./MovieRecommendation";
 
 const ReviewRecommendTab = ({ id }) => {
   const [key, setKey] = useState("reviews");
   const { data: reviewData } = useMovieReviewQuery({ id });
-  const { data: recommendationData } = useMovieRecommendations({ id });
-  console.log(recommendationData);
+  const { data: recommendationData } = useMovieRecommendationsQuery({ id });
+
   const reviewCount = reviewData ? reviewData.length : 0;
   const recommendationCount = recommendationData
     ? recommendationData.length

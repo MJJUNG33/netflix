@@ -1,0 +1,19 @@
+.trailer-icon {
+height: 20px;
+padding-bottom: 3px;
+margin-right: 0.25rem;  
+}
+
+.trailer-button {
+    font-weight: bold;
+    margin-top: 0.5rem;
+    margin-left: 0.5rem;
+    padding: 0.1rem 1rem;
+    text-align: start;
+    max-width:max-content;
+    margin-bottom: 0.5rem;
+}
+
+.modal-content {
+background-color: black;
+}

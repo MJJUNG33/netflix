@@ -9,6 +9,7 @@ import { useParams } from "react-router-dom";
 import { useSearchMovieQuery } from "../../hooks/useSearchMovie";
 import CurrencyFormat from "react-currency-format";
 import MovieReviewRecommendTab from "./components/ReviewRecommendTab";
+import MovieTrailer from "./components/MovieTrailer";
 
 const MovieDetailPage = () => {
   const { id } = useParams();
@@ -71,6 +72,7 @@ const MovieDetailPage = () => {
             </Col>
             <Col lg={7} className=" movie-detail-info">
               <h4 className="text-start">{data?.title}</h4>
+
               <div className="text-start genres">
                 {showGenre(data?.genres).map((genre, index) => (
                   <Badge key={index} bg="danger" className="me-1">
@@ -104,7 +106,9 @@ const MovieDetailPage = () => {
                   />
                 </Col>
               </Row>
-
+              <Row className="">
+                <MovieTrailer id={id} />
+              </Row>
               <Row className="runtime-release">
                 <Col xs={5} md={12}>
                   {" "}
@@ -132,6 +136,7 @@ const MovieDetailPage = () => {
               <div>{data.adult ? <Badge bg="danger">18</Badge> : ""}</div>
             </Col>
           </Row>
+
           <MovieReviewRecommendTab id={id} />
         </>
       )}

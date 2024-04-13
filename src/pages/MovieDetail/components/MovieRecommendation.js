@@ -1,5 +1,5 @@
 import React from "react";
-import { useMovieRecommendations } from "../../../hooks/useMovieRecommendations";
+import { useMovieRecommendationsQuery } from "../../../hooks/useMovieRecommendations";
 import "./MovieRecommendation.style.css";
 import { Col, Container, Row } from "react-bootstrap";
 import MovieCard from "../../../common/MovieCard/MovieCard";
@@ -10,7 +10,7 @@ const MovieRecommendation = ({ id }) => {
     isLoading,
     isError,
     error,
-  } = useMovieRecommendations({ id });
+  } = useMovieRecommendationsQuery({ id });
 
   if (isLoading) {
     return (
