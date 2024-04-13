@@ -1,0 +1,28 @@
+#controlled-tab-example-tab-reviews,
+#controlled-tab-example-tab-recommend {
+  background-color: rgb(220, 53, 69);
+  color: white;
+  font-weight: bold;
+  margin-right: 1rem;
+  padding: 0.3rem;
+}
+  
+  #controlled-tab-example-tab-reviews:active,
+  #controlled-tab-example-tab-recommend:active,
+  #controlled-tab-example-tab-reviews.active,
+  #controlled-tab-example-tab-recommend.active {
+    background-color: white;
+    color: rgb(220, 53, 69);
+  }
+
+  #controlled-tab-example{
+    border: 0;
+ 
+  }
+
+  .review-recommend {
+    margin-top: 5rem;
+  }
+
+
+  

@@ -8,7 +8,7 @@ import { useMovieGenreQuery } from "../../hooks/useMovieGenre";
 import { useParams } from "react-router-dom";
 import { useSearchMovieQuery } from "../../hooks/useSearchMovie";
 import CurrencyFormat from "react-currency-format";
-import MovieReview from "./components/MovieReview";
+import MovieReviewRecommendTab from "./components/ReviewRecommendTab";
 
 const MovieDetailPage = () => {
   const { id } = useParams();
@@ -132,7 +132,7 @@ const MovieDetailPage = () => {
               <div>{data.adult ? <Badge bg="danger">18</Badge> : ""}</div>
             </Col>
           </Row>
-          <MovieReview id={id} />
+          <MovieReviewRecommendTab id={id} />
         </>
       )}
     </Container>
