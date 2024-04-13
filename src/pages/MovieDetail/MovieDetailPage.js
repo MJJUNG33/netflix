@@ -7,7 +7,7 @@ import budgetIcon from "../../images/money-bag.png";
 import { useMovieGenreQuery } from "../../hooks/useMovieGenre";
 import { useParams } from "react-router-dom";
 import { useSearchMovieQuery } from "../../hooks/useSearchMovie";
-import CurrencyFormat from "react-currency-format";
+import { NumericFormat } from "react-number-format";
 import MovieReviewRecommendTab from "./components/ReviewRecommendTab";
 import MovieTrailer from "./components/MovieTrailer";
 
@@ -98,7 +98,7 @@ const MovieDetailPage = () => {
                   <span>
                     <img src={budgetIcon} alt="budget" className=" icons " />
                   </span>
-                  <CurrencyFormat
+                  <NumericFormat
                     value={data?.budget}
                     displayType={"text"}
                     thousandSeparator={true}
