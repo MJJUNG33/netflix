@@ -24,7 +24,6 @@ const PopularMovieSlide = () => {
         title="Popular Movies"
         movies={data.results}
         responsive={responsive}
-        className="movie-slider"
       />
     </div>
   );

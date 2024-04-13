@@ -11,7 +11,6 @@ const UpcomingMoviesSlider = ({ title, movies, responsive, deviceType }) => {
       <h3 className="carousel-title">{title}</h3>
       <Carousel
         infinite={true}
-        // centerMode={true}
         itemClass="movie-slider p-1"
         containerClass="carousel-container"
         responsive={responsive}
